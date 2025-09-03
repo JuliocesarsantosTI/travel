@@ -1,4 +1,4 @@
-const API_KEY = 'fw_3ZSw7T7yeAxeDAKaVaosL8Fr'; // Replace with your Fireworks API Key
+const API_KEY = 'your api key'; // Replace with your Fireworks API Key
 const url = 'https://api.fireworks.ai/inference/v1/chat/completions';
 
 const chatBox = document.getElementById('chat-box');
@@ -347,3 +347,4 @@ inputBox.addEventListener('keydown', (e) => {
 });
 
 addMsg('ai', 'Tell me your origin, budget, and dates  I\'ll find a destination that maximizes weather, value, and your interests.');
+
