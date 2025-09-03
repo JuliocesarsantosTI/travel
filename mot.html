@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TravelMatch • Best Destination Picker (Light Blue)</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="" aria-hidden="true"><img style="width: 100px;height: 100px;border-radius:10px ;margin-top: 10%;" src="op.png" alt=""></div>
+        <div>
+          <h1>TravelMatch With <span style="color: gold;">Dobby</span></h1>
+          <div class="sub">Pick the best destination based on your budget, time, and vibe  powered by Dobby.</div>
+        </div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <form id="prefs">
+          <div class="row">
+            <div>
+              <label for="origin">Where are you starting from?</label>
+              <input id="origin" type="text" placeholder="e.g., Berlin, Germany" required />
+            </div>
+            <div>
+              <label for="budget">Total budget (€)</label>
+              <input id="budget" type="number" inputmode="decimal" min="0" step="50" placeholder="e.g., 1500" required />
+            </div>
+          </div>
+          <div class="row-3">
+            <div>
+              <label for="start">Start date</label>
+              <input id="start" type="date" />
+            </div>
+            <div>
+              <label for="end">End date</label>
+              <input id="end" type="date" />
+            </div>
+            <div>
+              <label for="nights">Nights (optional)</label>
+              <input id="nights" type="number" min="1" step="1" placeholder="e.g., 7" />
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label for="travelers">Who's going?</label>
+              <select id="travelers">
+                <option value="solo">Solo</option>
+                <option value="couple" selected>Couple</option>
+                <option value="family">Family</option>
+                <option value="friends">Friends</option>
+              </select>
+            </div>
+            <div>
+              <label for="pace">Pace</label>
+              <select id="pace">
+                <option value="relaxed">Relaxed</option>
+                <option value="balanced" selected>Balanced</option>
+                <option value="packed">Packed itinerary</option>
+              </select>
+            </div>
+          </div>
+
+          <fieldset>
+            <label>Interests</label>
+            <div class="chips" id="interests">
+              <div class="chip" data-val="beaches">Beaches</div>
+              <div class="chip" data-val="food">Food</div>
+              <div class="chip" data-val="history">History</div>
+              <div class="chip" data-val="museums">Museums</div>
+              <div class="chip" data-val="nightlife">Nightlife</div>
+              <div class="chip" data-val="nature">Nature</div>
+              <div class="chip" data-val="hiking">Hiking</div>
+              <div class="chip" data-val="theme_parks">Theme Parks</div>
+              <div class="chip" data-val="festivals">Festivals</div>
+              <div class="chip" data-val="skiing">Skiing</div>
+            </div>
+          </fieldset>
+
+          <div class="row">
+            <div>
+              <label for="climate">Climate preference</label>
+              <select id="climate">
+                <option value="any">Any</option>
+                <option value="warm">Warm</option>
+                <option value="mild">Mild</option>
+                <option value="cold">Cold</option>
+              </select>
+            </div>
+            <div>
+              <label for="language">Language comfort (optional)</label>
+              <input id="language" type="text" placeholder="e.g., English, German, Spanish" />
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="prefer">Prefer regions (optional)</label>
+              <input id="prefer" type="text" placeholder="e.g., Southern Europe, SE Asia" />
+            </div>
+            <div>
+              <label for="avoid">Avoid regions (optional)</label>
+              <input id="avoid" type="text" placeholder="e.g., long-haul flights, USA" />
+            </div>
+          </div>
+
+          <div>
+            <label for="input-box">Any other conditions or must-haves?</label>
+            <textarea id="input-box" placeholder="e.g., direct flights only, vegan-friendly, kid-friendly hotel, avoid rain, remote work wifi"></textarea>
+          </div>
+        </form>
+        <div class="actions">
+          <button class="secondary" id="clear-btn" type="button">Clear</button>
+          <button class="primary" id="send-button" type="button">Find Best Destination</button>
+        </div>
+      </section>
+
+      <section class="card panel">
+        <div id="chat-box" aria-live="polite" aria-label="Chat transcript" class="tiny"></div>
+        <div class="results" id="results"></div>
+        <div class="footer-note tiny">
+          <strong></strong>
+        </div>
+      </section>
+    </div>
+  </div>
+
+ <script src="script.js"></script>
+</body>
+</html>
