@@ -1,0 +1,1 @@
+I  designed a site using Dobby API that, based on location, capital, travel date, user interest, and other factors, suggests the best destinations for users to travel, analyzes them thoroughly and provides a travel plan for the user
